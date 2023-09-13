@@ -3,7 +3,6 @@ musica1.Nome = "Pais e Filhos";
 musica1.Artista = "Legião Urbana";
 musica1.Duracao = 304;
 musica1.Disponivel = true;
-Console.WriteLine(musica1.DescricaoResumida);
 
 Musica musica2 = new Musica();
 musica2.Nome = "Dai a Cesar o que é de Cesar";
