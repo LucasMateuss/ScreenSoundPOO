@@ -11,4 +11,5 @@ musica2.Duracao = 306;
 musica2.Disponivel = false;
 
 musica1.ExibirFixaTecnica();
+
 musica2.ExibirFixaTecnica();
