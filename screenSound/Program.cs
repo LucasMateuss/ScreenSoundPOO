@@ -1,15 +1,25 @@
-﻿Musica musica1 = new Musica();
-musica1.Nome = "Pais e Filhos";
-musica1.Artista = "Legião Urbana";
-musica1.Duracao = 304;
-musica1.Disponivel = true;
+﻿Banda racionais = new Banda("Racionais MC's");
 
-Musica musica2 = new Musica();
-musica2.Nome = "Dai a Cesar o que é de Cesar";
-musica2.Artista = "Cesar MC";
-musica2.Duracao = 306;
-musica2.Disponivel = false;
+Album albumDoRacionais = new Album("Sobrevivendo no Inferno");
 
-musica1.ExibirFixaTecnica();
+Musica musica1 = new Musica(racionais, "Capítulo 4, Versículo 3")
+{
+    Duracao = 486,
+    Disponivel = true,
+};
 
-musica2.ExibirFixaTecnica();
+Musica musica2 = new Musica(racionais, "Diário de um Detento")
+{
+    Duracao = 451,
+    Disponivel = false,
+};
+
+racionais.AdicionarAlbum(albumDoRacionais);
+
+albumDoRacionais.AdicionarMusica(musica1);
+albumDoRacionais.AdicionarMusica(musica2);
+
+musica1.ExibirFichaTecnica();
+musica2.ExibirFichaTecnica();
+albumDoRacionais.ExibirMusicasDoAlbum();
+racionais.ExibirDiscografia();
